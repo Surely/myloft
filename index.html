@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+<title>My Loft</title>
+
+<!-- 1. skin -->
+<link rel="stylesheet" href="./static/skin.css">
+
+<!-- 2. jquery library - required for video tag based installs -->
+<script src="./static/jquery-1.12.4.min.js"></script>
+
+<!-- 3. flowplayer -->
+<script src="./static/flowplayer.min.js"></script>
+</head>
+<body>
+  <div class="player">
+   <video>
+      <!--<source type="application/x-mpegurl" src="//mydomain.com/video.m3u8">-->
+      <source type="video/mp4"             src="./test.mp4">
+   </video>
+</div>
+
+<script>
+// run script after document is ready
+$(function () {
+
+   // install flowplayer into all elements with CSS class="player"
+   $(".player").flowplayer();
+
+});
+</script>
+</body>
